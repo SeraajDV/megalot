@@ -6,9 +6,10 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Search, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import CartButton from "./cart-button";
+import MobileSearch from "./mobile-search";
 import SideMenu from "./side-menu";
 import WishlistButton from "./wishlist-button";
 
@@ -78,6 +79,7 @@ const Header = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+
           <div className="flex items-center gap-2">
             <WishlistButton />
             <CartButton items={0} />
@@ -88,9 +90,7 @@ const Header = () => {
         <SideMenu />
         <Image src="/logo.webp" width={200} height={100} alt="logo" />
         <div className="flex items-center gap-2">
-          <div className="cursor-pointer">
-            <Search />
-          </div>
+          <MobileSearch />
           <div className="cursor-pointer">
             <ShoppingCart />
           </div>

@@ -6,7 +6,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { ArrowRight, Heart, Menu, ShoppingCart } from "lucide-react";
+import { ArrowRight, Heart, Menu, ShoppingCart, UserRound } from "lucide-react";
 import Image from "next/image";
 
 const SideMenu = () => {
@@ -60,7 +60,13 @@ const SideMenu = () => {
                 <div className="text-sm"></div>
               </div>
             </div>
-            
+            <div className="flex w-full items-center justify-evenly py-4">
+              <div className="flex items-center rounded-full bg-main_bg px-4 py-2 text-white cursor-pointer">
+                <UserRound />
+                <p className="">Login</p>
+              </div>
+              <div className="py-2 text-main_bg cursor-pointer">Register</div>
+            </div>
           </SheetDescription>
         </SheetHeader>
       </SheetContent>
